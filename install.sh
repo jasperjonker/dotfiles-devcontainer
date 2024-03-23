@@ -15,10 +15,8 @@ sudo apt -qq update
 sudo apt -qq install -y bat zsh neovim curl
 
 # Install nodejs for neovim
-curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/node.gpg add -
-echo "deb [signed-by=/usr/share/keyrings/node-archive-keyring.gpg] https://deb.nodesource.com/node_19.x jammy main" | sudo tee /etc/apt/sources.list.d/nodesource.list > /dev/null
-sudo apt update
-sudo apt -qq install -y nodejs
+curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - && \
+sudo apt install -y nodejs
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y

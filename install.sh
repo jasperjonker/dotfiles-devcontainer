@@ -20,7 +20,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Create nvim folder
-mkdir ~/.config/nvim
+mkdir -p ~/.config/nvim
 
 # Create symlinks
 ln -nfs $HOME/dotfiles/.zshrc $HOME/.zshrc

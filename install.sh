@@ -14,6 +14,8 @@ git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git $HO
 if command -v apt-get &> /dev/null; then
   sudo apt -qq update && sudo apt -qq install -y bat zsh neovim curl
 fi
+# Install starship
+curl -sS https://starship.rs/install.sh | sh
 
 # Install neovim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

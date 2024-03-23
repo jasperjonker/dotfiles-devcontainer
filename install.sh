@@ -10,10 +10,16 @@ git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $HO
 # Install spaceship prompt
 git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git $HOME/.oh-my-zsh/custom/themes/spaceship-prompt
 
-# Install bat & zsh
-if command -v apt-get &> /dev/null; then
-  sudo apt -qq update && sudo apt -qq install -y bat zsh neovim curl
-fi
+# Install bat & zsh & neovim
+sudo apt -qq update
+sudo apt -qq install -y bat zsh neovim curl
+
+# Install nodejs for neovim
+curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key --keyring /etc/apt/trusted.gpg.d/node.gpg add -
+echo "deb [signed-by=/usr/share/keyrings/node-archive-keyring.gpg] https://deb.nodesource.com/node_19.x jammy main" | sudo tee /etc/apt/sources.list.d/nodesource.list > /dev/null
+sudo apt update
+sudo apt -qq install -y nodejs
+
 # Install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 

@@ -12,7 +12,7 @@ git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git $HO
 
 # Install bat & zsh
 if command -v apt-get &> /dev/null; then
-  sudo apt update && sudo apt install -y bat zsh neovim
+  sudo apt -qq update && sudo apt -qq install -y bat zsh neovim curl
 fi
 
 # Install neovim plug

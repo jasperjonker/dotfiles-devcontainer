@@ -15,7 +15,7 @@ if command -v apt-get &> /dev/null; then
   sudo apt -qq update && sudo apt -qq install -y bat zsh neovim curl
 fi
 # Install starship
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 # Install neovim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

@@ -110,3 +110,6 @@ alias cat=bat
 
 export EDITOR="nvim"
 export KUBE_EDITOR="nvim"
+
+# For dev container GPG keys
+export GPG_TTY=$(tty)

@@ -113,3 +113,16 @@ export KUBE_EDITOR="nvim"
 
 # For dev container GPG keys
 export GPG_TTY=$(tty)
+
+# Set up pyenv root
+export PYENV_ROOT="${PYENV_ROOT:-$HOME/.pyenv}"
+
+# Add pyenv to PATH if not already present
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+
+# Initialize pyenv
+eval "$(pyenv init -)"
+
+# Initialize pyenv-virtualenv
+eval "$(pyenv virtualenv-init -)"
+

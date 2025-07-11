@@ -35,4 +35,5 @@ ln -nfs $HOME/dotfiles/nvim/init.vim $HOME/.config/nvim/init.vim
 ln -nfs $HOME/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme $HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme
 
 # Launch NeoVim and execute PlugInstall, PlugUpdate, and PlugUpgrade
-nvim -c ":PlugInstall | :PlugUpdate | :PlugUpgrade" -c ":qall"
+#nvim -c ":PlugInstall | :PlugUpdate | :PlugUpgrade" -c ":qall"
+nvim --headless +PlugInstall +PlugUpgrade +PlugUpdate +qa

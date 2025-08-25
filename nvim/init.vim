@@ -188,3 +188,11 @@ inoremap <F5> <esc>:w<enter>:!%:p<enter>
 
 nnoremap <F6> <esc>:w<enter>:!python %:p<enter>
 inoremap <F6> <esc>:w<enter>:!python %:p<enter>
+
+" Use Tab for completion confirm, otherwise insert a real tab
+inoremap <silent><expr> <TAB> 
+      \ coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+
+" Use Shift-Tab to go backwards in the completion menu
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
